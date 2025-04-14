@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trevo User Manual</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    #body {
+      margin-left: 3vw;
+      margin-right: 2vw;
+    }
+    .section {
+      background-color: #f9f9f9;
+      border-left: 4px solid #3f51b5;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+    .screenshot-box {
+      width: 100%;
+      height: 250px;
+      background-color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-style: italic;
+      color: #666;
+      margin-top: 15px;
+      border-radius: 6px;
+    }
+    h2, h3 {
+      color: #3f51b5;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+<header class="header" id="a">
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card header">
+        <img src="../assets/trevo.svg" style="height: 9vw; width: 9vw; margin: 2vw;"/>
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div style="display: flex; flex-flow: row norwap; width: 100%;">
+        	<a href="../index.html" class="w3-bar-item w3-button w3-padding-medium">Home</a>
+       	 <a href="../usermanual/index.html" class="w3-bar-item w3-button w3-padding-medium">User Manual</a>
+     	   <a href="#a" class="w3-teal w3-bar-item w3-button w3-padding-medium">Dev Guide</a>
+      	  <a href="../more.html" class="w3-bar-item w3-button w3-padding-medium">More</a>
+        </div>
+        <span class="w3-right">
+          <a href="#a" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
+          <a href="#b" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Changelog</a>
+          <a href="#c" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
+          <a href="#d" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Application</a>
+          <a href="#e" class="w3-bar-item w3-button w3-padding-large w3-hide-small">License</a>
+        </span>
+      </div>
+    </div>
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+      <a href="#a" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
+      <a href="#b" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Changelog</a>
+      <a href="#c" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQ</a>
+      <a href="#d" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Application</a>
+      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">License</a>
+    </div>
+  </header>
+<div id="body" class="w3-container">
+  
+  <h2><i class="fa fa-book"></i> Trevo - User Manual</h2>
+
+  <div class="section">
+    <h3><i class="fa fa-sign-in"></i> 1. Authentication</h3>
+    <p>Users can <strong>Sign Up</strong> or <strong>Log In</strong>.</p>
+    <ul>
+      <li><strong>Sign Up:</strong> Requires username, password, and email (for future password recovery).</li>
+      <li><strong>Log In:</strong> Username and password are required.</li>
+      <li><em>Note:</em> Verification and password recovery are not yet implemented.</li>
+    </ul>
+    <div class="screenshot-box">[Screenshot: Sign Up & Login Page]</div>
+  </div>
+
+  <div class="section">
+    <h3><i class="fa fa-home"></i> 2. Home Page</h3>
+    <p>After logging in, you will see your Home Page. Initially, it will be empty.</p>
+    <p>To add apps:</p>
+    <ul>
+      <li>Click the <strong>+</strong> button to open the App Store and install apps.</li>
+    </ul>
+    <div class="screenshot-box">[Screenshot: Home Page & App Store]</div>
+  </div>
+
+  <div class="section">
+    <h3><i class="fa fa-compass"></i> 3. Navigation</h3>
+    <p>Use the bottom navigation bar to switch between pages:</p>
+    <ul>
+      <li><strong>Home</strong></li>
+      <li><strong>Messages</strong></li>
+      <li><strong>Tasks</strong></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3><i class="fa fa-user-plus"></i> 4. Friends</h3>
+    <p>You can add friends using the top-right section of the Home Page.</p>
+    <div class="screenshot-box">[Screenshot: Friend Add Button]</div>
+  </div>
+
+  <div class="section">
+    <h3><i class="fa fa-commenting"></i> 5. Message Page (AI Assistant)</h3>
+    <p>This page allows interaction with Trevo's AI assistant to automate tasks using installed apps.</p>
+    <ul>
+      <li>Send commands like: <em>"Set a reminder every Monday at 9 AM."</em></li>
+      <li>Select an app on the left to help the AI understand the context.</li>
+      <li>Transfer data between apps using AI prompts.</li>
+    </ul>
+    <div class="screenshot-box">[Screenshot: AI Prompt Interface]</div>
+  </div>
+
+  <div class="section">
+    <h3><i class="fa fa-tasks"></i> 6. Task Page</h3>
+    <p>Edit or review automated tasks.</p>
+    <p>In the top-right corner:</p>
+    <ul>
+      <li>Update your account info</li>
+      <li>Add up to 3 additional emails</li>
+    </ul>
+    <div class="screenshot-box">[Screenshot: Task Page + Settings]</div>
+  </div>
+
+  <div class="section">
+    <h3><i class="fa fa-magic"></i> 7. Example Usage</h3>
+    <p>Command: <em>“Hey Trevo, open the chatgpt-like app and prompt ‘best way to greet’, then send it to Gary via Messenger.”</em></p>
+    <p>Trevo will:</p>
+    <ol>
+      <li>Open ChatGPT-like app</li>
+      <li>Prompt it as instructed</li>
+      <li>Send the result using Messenger app</li>
+    </ol>
+  </div>
+
+  <hr>
+  <p class="w3-small w3-text-grey">This manual outlines current features. Trevo is actively developing—features and UI may evolve.</p>
+</div>
+<script>
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+</body>
+</html>

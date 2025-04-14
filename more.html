@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Trevo Documentation</title>
+</head>
+<body>
+  <header class="header" id="a">
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card header">
+        <img src="assets/trevo.svg" style="height: 9vw; width: 9vw; margin: 2vw;"/>
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div style="display: flex; flex-flow: row norwap; width: 100%;">
+        	<a href="index.html" class="w3-bar-item w3-button w3-padding-medium">Home</a>
+       	 <a href="usermanual/index.html" class="w3-bar-item w3-button w3-padding-medium">User Manual</a>
+     	   <a href="developerguide/index.html" class="w3-bar-item w3-button w3-padding-medium">Dev Guide</a>
+      	  <a href="#a" class="w3-teal w3-bar-item w3-button w3-padding-medium">More</a>
+        </div>
+        <div style="display: flex; flex-flow: row norwap; width: 100%;">
+        	<a href="apidocs/index.html" class="w3-bar-item w3-button w3-padding-medium">API Docs</a>
+     	   <a href="roadmap/index.html" class="w3-bar-item w3-button w3-padding-medium">Roadmap</a>
+      	  <a href="research/index.html" class="w3-bar-item w3-button w3-padding-medium">Research</a>
+        </div>
+        <span class="w3-right">
+          <a href="#a" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
+          <a href="#b" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Changelog</a>
+          <a href="#c" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
+          <a href="#d" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Application</a>
+          <a href="#e" class="w3-bar-item w3-button w3-padding-large w3-hide-small">License</a>
+        </span>
+      </div>
+    </div>
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+      <a href="#a" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
+      <a href="#b" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Changelog</a>
+      <a href="#c" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQ</a>
+      <a href="#d" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Application</a>
+      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">License</a>
+    </div>
+  </header>
+  
+<div class="w3-light-grey">
+  <br/><br/><br/>
+  <!-- Main Content Area -->
+  <div class="w3-container w3-padding" style="max-width: 1200px; margin-top: 20px;">
+    
+    <!-- Welcome Section -->
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-col s12 m6 l6 w3-center">
+        <div class="w3-card-4 w3-hover-shadow-xxlarge w3-teal">
+          <div class="w3-container w3-teal">
+            <h2><i class="fa fa-dashboard"></i>More About Trevo</h2>
+          </div>
+          <div class="w3-container ">
+            <p class="w3-margin-bottom ">More Information to be found in here!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Cards for API Docs, Roadmap, and Research -->
+    <div class="w3-row-padding w3-margin-top">
+      
+      <!-- API Docs Card -->
+      <div class="w3-col s12 m4 l4">
+        <div class="w3-card-4 w3-hover-shadow-xxlarge w3-light-grey">
+          <div class="w3-container w3-teal">
+            <h3><i class="fa fa-book"></i> API Docs</h3>
+          </div>
+          <div class="w3-container">
+            <p>Explore the detailed API documentation to help you integrate and interact with Trevo’s features.</p>
+            <a href="pidocs/index.html" class="w3-margin-bottom w3-button w3-block w3-teal w3-hover-shadow-small">Go to API Docs</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Roadmap Card -->
+      <div class="w3-margin-top w3-col s12 m4 l4">
+        <div class="w3-card-4 w3-hover-shadow-xxlarge w3-light-grey">
+          <div class="w3-container w3-teal">
+            <h3><i class="fa fa-road"></i> Roadmap</h3>
+          </div>
+          <div class="w3-container">
+            <p>View the Trevo roadmap to learn more about upcoming features and future plans for the platform.</p>
+            <a href="roadmap/index.html" class="w3-margin-bottom w3-button w3-block w3-teal w3-hover-shadow-small">Go to Roadmap</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Card -->
+      <div class="w3-margin-top w3-col s12 m4 l4">
+        <div class="w3-card-4 w3-hover-shadow-xxlarge w3-light-grey">
+          <div class="w3-container w3-teal">
+            <h3><i class="fa fa-flask"></i> Research</h3>
+          </div>
+          <div class="w3-container">
+            <p>Access ongoing research that shapes the development of Trevo, providing insights and future innovations.</p>
+            <a href="research/index.html" class="w3-margin-bottom w3-button w3-block w3-teal w3-hover-shadow-small">Go to Research</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Optional Stats Section (if needed) -->
+    <div class="w3-margin-top w3-row-padding w3-margin-top">
+      
+      <!-- User Stats -->
+      <div class="w3-margin-top w3-col s12 m6 l4">
+        <div class="w3-card-4 w3-hover-shadow-xxlarge w3-teal">
+          <div class="w3-container">
+            <h3><i class="fa fa-users"></i> Total Users</h3>
+            <p>N Users</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Tasks Stats -->
+      <div class="w3-margin-top w3-col s12 m6 l4">
+        <div class="w3-card-4 w3-hover-shadow-xxlarge w3-teal">
+          <div class="w3-container">
+            <h3><i class="fa fa-tasks"></i> Active Tasks</h3>
+            <p>N Active Tasks</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- System Status -->
+      <div class="w3-margin-top w3-col s12 m6 l4">
+        <div class="w3-card-4 w3-hover-shadow-xxlarge w3-teal">
+          <div class="w3-container">
+            <h3><i class="fa fa-cogs"></i> System Status</h3>
+            <p>Online</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+</body>
+</html>
