@@ -1,110 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Trevo Research Instrument</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 20px;
-  }
-
-  h1 {
-    font-size: 6vw;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  #message {
-    font-size: 4vw;
-    margin: 10px 0;
-  }
-
-  .grid {
-    display: grid;
-    gap: 8px;
-    justify-content: center;
-    margin: 20px auto;
-    height: 50px;
-    margin-bottom: 10vw;
-    width: 50px;
-    position: fixed;
-    top: 13%
-  }
-
-  .square {
-    background: lightgray;
-    cursor: pointer;
-    border: 1px solid #333;
-  }
-
-  .square.disabled {
-    background: darkgray;
-    pointer-events: none;
-  }
-
-  .square.active {
-    background: green !important;
-  }
-
-  .square.selected {
-    background: black !important;
-    pointer-events: none;
-  }
-
-  .w3-button {
-    font-size: 4vw;
-    padding: 10px 30px;
-    position: fixed;
-    bottom: 7vw;
-  }
-
-  #results {
-    font-size: 4vw;
-    margin-top: 20px;
-  }
-
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(3, 12vw);
-      grid-template-rows: repeat(7, 12vw);
+    html, body { height: 100%; margin: 0; font-family: Arial, sans-serif; }
+    body { display: flex; flex-direction: column; align-items: center; padding-top: 20px; }
+    h1 { font-size: 6vw; text-align: center; margin-bottom: 10px; }
+    #message { font-size: 4vw; margin: 10px 0; }
+    .grid { display: grid; gap: 8px; justify-content: center; margin: 20px auto; height: 50px; margin-bottom: 10vw; width: 50px; position: fixed; top: 13% }
+    .square { background: lightgray; cursor: pointer; border: 1px solid #333; }
+    .square.disabled { background: darkgray; pointer-events: none; }
+    .square.active { background: green !important; }
+    .square.selected { background: black !important; pointer-events: none; }
+    .w3-button { font-size: 4vw; padding: 10px 30px; position: fixed; bottom: 7vw; }
+    #results { font-size: 4vw; margin-top: 20px; }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: repeat(3, 12vw); grid-template-rows: repeat(7, 12vw); }
+      .square { width: 12vw; height: 12vw; }
     }
-    .square {
-      width: 12vw;
-      height: 12vw;
+    @media (min-width: 769px) {
+      .grid { grid-template-columns: repeat(7, 70px); grid-template-rows: repeat(3, 70px); margin-bottom: 10vw; }
+      .square { width: 70px; height: 70px; }
     }
-  }
-
-  @media (min-width: 769px) {
-    .grid {
-      grid-template-columns: repeat(7, 70px);
-      grid-template-rows: repeat(3, 70px);
-      margin-bottom: 10vw;
-    }
-    .square {
-      width: 70px;
-      height: 70px;
-    }
-  }
   </style>
 </head>
 <body class="w3-container">
-  <h1 id="title" class="w3-xxlarge">Task Performance in Different Variety: A Research Instruments</h1>
-  <div id="message" class="w3-margin w3-xlarge">Landscape Mode! for a larger view. Note that form will be disabled upon three(3) tries only.</div>
-  <div class="grid w3-center" id="grid"></div>
-  <button class="w3-button w3-blue w3-xlarge w3-margin" onclick="startGame()">Start / Retry</button>
-  <div id="results" class="w3-margin w3-large"></div>
+  <h1 id="title">Task Performance in Different Variety: A Research Instruments</h1>
+  <div id="message">Landscape Mode! for a larger view. Note that form will be disabled upon three(3) tries only.</div>
+  <div class="grid" id="grid"></div>
+  <button class="w3-button w3-blue" onclick="startGame()">Start / Retry</button>
+  <div id="results"></div>
 
   <script>
     const gridEl = document.getElementById('grid');
@@ -135,7 +63,7 @@
                 preservedUnavailable = new Set(unavailable);
                 setTimeout(() => {
                   initGrid();
-                  nextRound(1);
+                  nextRound();
                 }, 500);
               }
             }
@@ -148,12 +76,14 @@
     function flashSequence(index = 0) {
       gameActive = false;
       if (index >= sequence.length) {
-        setTimeout(() => {
-          enableClicks();
-          gameActive = true;
-        }, 300);
-        return;
-      }
+  setTimeout(() => {
+    userClicks = [];
+    enableClicks();
+    gameActive = true;
+    alert("Go");
+  }, 300);
+  return;
+}
       const sq = document.querySelector(`[data-index='${sequence[index]}']`);
       sq.classList.add('active');
       setTimeout(() => {
@@ -164,6 +94,7 @@
 
     function enableClicks() {
       document.querySelectorAll('.square').forEach(sq => {
+        sq.onclick = null;
         const idx = parseInt(sq.dataset.index);
         if (!unavailable.has(idx)) {
           sq.onclick = () => handleClick(idx);
@@ -176,6 +107,7 @@
       userClicks.push(idx);
       const expected = sequence[userClicks.length - 1];
       if (idx !== expected) {
+        gameActive = false;
         recordScore();
         trial++;
         if (trial <= 2) {
@@ -199,7 +131,7 @@
       }
     }
 
-    function nextRound(increment) {
+    function nextRound(increment = 1) {
       userClicks = [];
       const choices = [...Array(totalSquares).keys()].filter(i => !unavailable.has(i));
       for (let i = 0; i < increment; i++) {
@@ -285,8 +217,8 @@
         <p>Name: ${userName}</p>
         <p>Age: ${userAge}</p>
         <p>Stage 1 Score: ${score1}</p>
-        <p>Stage 2 Score: ${score2}</p>
-        <p>Stage 3 Score: ${score3}</p>
+        <p>Stage 2 Score: ${score2*2}</p>
+        <p>Stage 3 Score: ${score3*2}</p>
       `;
     }
   </script>
