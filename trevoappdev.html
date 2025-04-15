@@ -1,0 +1,141 @@
+<!DOCTYPE html><html>
+<head>
+  <title>Trevo App Development Tutorial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .code-box {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-left: 4px solid #4CAF50;
+      font-family: monospace;
+      overflow-x: auto;
+      white-space: pre;
+      display: block;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body class="w3-container w3-light-grey">  <div class="w3-bar w3-white w3-margin-top w3-padding">
+    <button class="w3-button w3-green" onclick="history.back()">Back</button>
+    <span class="w3-bar-item w3-xlarge">Trevo App Development Tutorial</span>
+  </div>  <div class="w3-content w3-margin-top w3-card w3-white w3-padding">
+    <h2>What is Trevo App Development?</h2>
+    <p>Trevo app development is the creation of a single Trevo file containing both front and back logic. It uses Trevo Code with two main parts:</p>
+    <ul>
+      <li><strong>Front:</strong> for the UI and user interaction</li>
+      <li><strong>Back:</strong> for backend logic and functions</li>
+    </ul><h3>Comment Syntax</h3>
+<div class="code-box">
+
+// This is a line comment
+/* This is a multi-line comment */ </div>
+
+<h3>Basic Structure</h3>
+<div class="code-box">
+Front() {
+	//frontend code
+}
+Back() {
+	var a = "a";
+	function hello(parameters) {
+		return parameters + a;
+	}
+} </div>
+
+<h3>Back with Variables and Functions</h3>
+<div class="code-box">
+Front() {
+	//frontend code
+}
+Back() {
+	var a = "a";
+	function hello(parameters) {
+		return parameters + a;
+	}
+} </div>
+<h3>Pages in Front</h3>
+<div class="code-box">
+Front() {
+	page main() {
+		
+	}
+	page otherpage() {
+		
+	}
+}
+Back() {
+	var a = "a";
+	function hello(parameters) {
+		return parameters + a;
+	}
+} </div>
+
+<h3>Using JSX in Front</h3>
+<div class="code-box">
+Front() {
+	page main() {
+		&lt;div onClick={(e)=>hello()}&gt;
+			//jsx code
+		&lt;/div&gt;
+	}
+	page otherpage() {
+		//jsx code
+	}
+}
+Back() {
+	var a = "a";
+	function hello(parameters) {
+		return parameters + a;
+	}
+} </div>
+
+<h3>Global Variable: trevo</h3>
+<ul>
+  <li><code>trevo.username</code> - gets the username of the user</li>
+  <li><code>trevo.friends</code> - gets the user's friend list</li>
+</ul>
+
+<h4>Storage Examples</h4>
+<div class="code-box">
+trevo.appStorage.set("key", "value");
+trevo.appStorage.get("key");
+
+trevo.userStorage.set("key", "value");
+trevo.userStorage.get("key");
+
+trevo.appsharedStorage.set("key", "value");
+trevo.appsharedStorage.get("key");
+trevo.appsharedStorage.access("AppName", "key");
+
+trevo.usersharedStorage.set("key", "value");
+trevo.usersharedStorage.get("key");
+trevo.usersharedStorage.access("AppName", "key"); </div>
+
+<h3>Full Example</h3>
+<div class="code-box">
+Front() {
+	page main() {
+		&lt;div onClick={(e)=>hello()}&gt;
+			{trevo.appsharedStorage.access("Message", "lastOpened")}
+		&lt;/div&gt;
+	}
+	page otherpage() {
+		&lt;div&gt;my name is {trevo.username}&lt;/div&gt;
+	}
+}
+
+Back() {
+	var a = "a";
+	function hello(parameters) {
+		return parameters + a;
+	}
+} </div>
+
+  </div>
+  <br/>
+  <button class="w3-button w3-green" onclick="history.back()">Back</button>
+  <br/><br/>
+</body>
+</html>

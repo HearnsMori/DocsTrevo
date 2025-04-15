@@ -2,50 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Trevo User Manual</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../style.css">
+  <title>DocsTrevo: Dev Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- W3.CSS and Font Awesome -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
-    #body {
-      margin-left: 3vw;
-      margin-right: 2vw;
+    body {
+      font-family: sans-serif;
+      padding-top: 60px;
     }
     .section {
-      background-color: #f9f9f9;
+      background-color: #f1f1f1;
       border-left: 4px solid #3f51b5;
-      padding: 20px;
-      margin-bottom: 30px;
+      padding: 16px;
+      margin: 16px;
       border-radius: 4px;
     }
     .screenshot-box {
-      width: 100%;
-      height: 250px;
-      background-color: #e0e0e0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-style: italic;
-      color: #666;
-      margin-top: 15px;
+      background: #ddd;
+      height: 200px;
+      text-align: center;
+      line-height: 200px;
+      color: #555;
       border-radius: 6px;
+      margin-top: 10px;
     }
     h2, h3 {
       color: #3f51b5;
     }
-    ul {
-      padding-left: 20px;
-    }
   </style>
 </head>
 <body>
-<header class="header" id="a">
+
+<!-- Simple Header -->
+  <header class="header" id="a">
     <div class="w3-top">
       <div class="w3-bar w3-black w3-card header">
         <img src="../assets/trevo.svg" style="height: 9vw; width: 9vw; margin: 2vw;"/>
@@ -59,100 +52,106 @@
       	  <a href="../more.html" class="w3-bar-item w3-button w3-padding-medium">More</a>
         </div>
         <span class="w3-right">
-          <a href="#a" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
-          <a href="#b" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Changelog</a>
-          <a href="#c" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
-          <a href="#d" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Application</a>
-          <a href="#e" class="w3-bar-item w3-button w3-padding-large w3-hide-small">License</a>
+          <a href="#a" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Setup</a>
+          <a href="#b" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Project Structure</a>
+          <a href="#c" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Authentication Flow</a>
+          <a href="#d" class="w3-bar-item w3-button w3-padding-large w3-hide-small">API Integration</a>
+          <a href="#e" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Trevo: AI Message Logic</a>
+          <a href="#f" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Trevo: App Dev</a>
         </span>
       </div>
     </div>
     <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-      <a href="#a" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
-      <a href="#b" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Changelog</a>
-      <a href="#c" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQ</a>
-      <a href="#d" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Application</a>
-      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">License</a>
+      <a href="#a" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Setup</a>
+      <a href="#b" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Project Structure</a>
+      <a href="#c" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Authentication Flow</a>
+      <a href="#d" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">API Integration</a>
+      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Trevo: AI Message Logic</a>
+      <a href="#f" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Trevo: App Logic</a>
     </div>
   </header>
-<div id="body" class="w3-container">
-  
-  <h2><i class="fa fa-book"></i> Trevo - User Manual</h2>
+  <br/><br/><br/>
 
-  <div class="section">
-    <h3><i class="fa fa-sign-in"></i> 1. Authentication</h3>
-    <p>Users can <strong>Sign Up</strong> or <strong>Log In</strong>.</p>
+<!-- Hidden Nav for Small Screens -->
+<div id="navMenu" class="w3-bar-block w3-black w3-hide">
+  <a href="#about" class="w3-bar-item w3-button">About</a>
+  <a href="#changelog" class="w3-bar-item w3-button">Changelog</a>
+  <a href="#faq" class="w3-bar-item w3-button">FAQ</a>
+  <a href="#application" class="w3-bar-item w3-button">Application</a>
+  <a href="#license" class="w3-bar-item w3-button">License</a>
+</div>
+
+<!-- Manual Content -->
+<div class="w3-container">
+
+  <h2><i class="fa fa-code"></i> Trevo - Developer Guide</h2>
+
+  <div id="a" class="section">
+    <h3><i class="fa fa-plug"></i> 1. Setup & Installation</h3>
     <ul>
-      <li><strong>Sign Up:</strong> Requires username, password, and email (for future password recovery).</li>
-      <li><strong>Log In:</strong> Username and password are required.</li>
-      <li><em>Note:</em> Verification and password recovery are not yet implemented.</li>
+      <li><strong>Backend:</strong> Node.js LTS version, Express</li>
+      <li><strong>Frontend:</strong> ReactJS, minimal dependencies</li>
+      <li><strong>Connection:</strong> Uses Axios in Frontend</li>
+      <li><strong>Clone:</strong> <code>//Available only for Developer working in Project-37</code></li>
+      <li><strong>Run Locally:</strong> <code>npm install (Backend) && npm start (Root)</code></li>
     </ul>
-    <div class="screenshot-box">[Screenshot: Sign Up & Login Page]</div>
+    <div class="screenshot-box">[Folder Structure Screenshot]</div>
   </div>
 
-  <div class="section">
-    <h3><i class="fa fa-home"></i> 2. Home Page</h3>
-    <p>After logging in, you will see your Home Page. Initially, it will be empty.</p>
-    <p>To add apps:</p>
+  <div id="b" class="section">
+    <h3><i class="fa fa-cogs"></i> 2. Project Structure</h3>
     <ul>
-      <li>Click the <strong>+</strong> button to open the App Store and install apps.</li>
+      <li><code>/Web-frontend</code> – All client-side files for Web (JSX)</li>
+      <li><code>/Backend</code> – API routes, database models, controllers, middleware</li>
+      <li><code>/Android-frontend</code> – Uses WebView in Android</li>
     </ul>
-    <div class="screenshot-box">[Screenshot: Home Page & App Store]</div>
+    <div class="screenshot-box">[Directory Layout]</div>
   </div>
 
-  <div class="section">
-    <h3><i class="fa fa-compass"></i> 3. Navigation</h3>
-    <p>Use the bottom navigation bar to switch between pages:</p>
+  <div id="c" class="section">
+    <h3><i class="fa fa-key"></i> 3. Authentication Flow</h3>
+    <p>Trevo uses session-based authentication.</p>
     <ul>
-      <li><strong>Home</strong></li>
-      <li><strong>Messages</strong></li>
-      <li><strong>Tasks</strong></li>
+      <li>Signup → Token Generation</li>
+      <li>Login → Token Validation</li>
+      <li>Tokens stored in localStorage</li>
     </ul>
+    <div class="screenshot-box">[Auth Flow Diagram]</div>
   </div>
 
-  <div class="section">
-    <h3><i class="fa fa-user-plus"></i> 4. Friends</h3>
-    <p>You can add friends using the top-right section of the Home Page.</p>
-    <div class="screenshot-box">[Screenshot: Friend Add Button]</div>
-  </div>
-
-  <div class="section">
-    <h3><i class="fa fa-commenting"></i> 5. Message Page (AI Assistant)</h3>
-    <p>This page allows interaction with Trevo's AI assistant to automate tasks using installed apps.</p>
+  <div id="d" class="section">
+    <h3><i class="fa fa-random"></i> 4. API Integration</h3>
     <ul>
-      <li>Send commands like: <em>"Set a reminder every Monday at 9 AM."</em></li>
-      <li>Select an app on the left to help the AI understand the context.</li>
-      <li>Transfer data between apps using AI prompts.</li>
+      <li>RESTful endpoints: <code>/api/[models to crud]</code></li>
+      <li>Middleware includes validation protecting all the routes</li>
     </ul>
-    <div class="screenshot-box">[Screenshot: AI Prompt Interface]</div>
+    <div class="screenshot-box">[Sample API Request]</div>
   </div>
 
-  <div class="section">
-    <h3><i class="fa fa-tasks"></i> 6. Task Page</h3>
-    <p>Edit or review automated tasks.</p>
-    <p>In the top-right corner:</p>
+  <div id="e" class="section">
+    <h3><i class="fa fa-comments"></i> 5. AI Messaging Interface</h3>
+    <p>Core feature using OpenAI-compatible API:</p>
     <ul>
-      <li>Update your account info</li>
-      <li>Add up to 3 additional emails</li>
+      <li>Message parsing and context mapping</li>
+      <li>App-to-app communication logic</li>
+      <li>Sample prompt routing in <code>routes/messsage.js</code></li>
     </ul>
-    <div class="screenshot-box">[Screenshot: Task Page + Settings]</div>
+    <div class="screenshot-box">[AI Flow Chart]</div>
   </div>
 
-  <div class="section">
-    <h3><i class="fa fa-magic"></i> 7. Example Usage</h3>
-    <p>Command: <em>“Hey Trevo, open the chatgpt-like app and prompt ‘best way to greet’, then send it to Gary via Messenger.”</em></p>
-    <p>Trevo will:</p>
-    <ol>
-      <li>Open ChatGPT-like app</li>
-      <li>Prompt it as instructed</li>
-      <li>Send the result using Messenger app</li>
-    </ol>
+  <div id="f" class="section">
+    <h3><i class="fa fa-wrench"></i> 6. Trevo App Development</h3>
+    <a href="../trevoappdev.html"
+        class="w3-button w3-round-xxlarge w3-hover-shadow w3-card-4 w3-animate-opacity"
+        style=" width: 73vw; padding:16px 32px; font-size:18px; background-color:#4CAF50; color:white; text-decoration:none;">
+        Go to Trevo App<br/>DevelopmentTutorial
+    </a>
+    
   </div>
 
   <hr>
-  <p class="w3-small w3-text-grey">This manual outlines current features. Trevo is actively developing—features and UI may evolve.</p>
-</div>
-<script>
+  <p class="w3-small w3-text-grey">Note: Contributions welcome! Just read the User Manual for Trevo App Development <code>CONTRIBUTING.md</code> for code system and contribute to the Trevo ecosystem.</p>
+  <script>
     function myFunction() {
       var x = document.getElementById("navDemo");
       if (x.className.indexOf("w3-show") == -1) {
@@ -162,5 +161,6 @@
       }
     }
   </script>
+</div>
 </body>
 </html>

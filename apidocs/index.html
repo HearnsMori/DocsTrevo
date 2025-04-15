@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../style.css">
-  <title>Trevo Documentation</title>
+  <title>DocsTrevo: API Info</title>
 </head>    
 <body>
   <header class="header" id="a">
@@ -23,20 +23,20 @@
       	  <a href="../more.html" class="w3-bar-item w3-button w3-padding-medium">More</a>
         </div>
         <span class="w3-right">
-          <a href="#a" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
-          <a href="#b" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Changelog</a>
-          <a href="#c" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
-          <a href="#d" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Application</a>
-          <a href="#e" class="w3-bar-item w3-button w3-padding-large w3-hide-small">License</a>
+          <a href="#a" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Generating API</a>
+          <a href="#b" class="w3-bar-item w3-button w3-padding-large w3-hide-small">How it works</a>
+          <a href="#c" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Example</a>
+          <a href="#d" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Security</a>
+          <a href="#e" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Use Cases</a>
         </span>
       </div>
     </div>
     <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-      <a href="#a" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
-      <a href="#b" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Changelog</a>
-      <a href="#c" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQ</a>
-      <a href="#d" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Application</a>
-      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">License</a>
+      <a href="#a" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Generating API</a>
+      <a href="#b" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">How it works</a>
+      <a href="#c" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Example</a>
+      <a href="#d" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Security</a>
+      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Use Cases</a>
     </div>
   </header>
 <div class="w3-light-grey">
@@ -45,7 +45,7 @@
 
     <h2 class="w3-text-teal w3-center w3-padding-16"><i class="fa fa-code"></i> Trevo API Documentation</h2>
 
-    <div class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
+    <div id="a" class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
       <h3><i class="fa fa-key"></i> Generating Your API Key</h3>
       <p>To enable automation or remote messaging from IoT devices, bots, or external services, each user can generate their unique API key.</p>
       <ul class="w3-ul">
@@ -57,7 +57,7 @@
       <div class="w3-grey w3-round screenshot-box">[Screenshot: API Key section in Settings]</div>
     </div>
 
-    <div class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
+    <div id="b" class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
       <h3><i class="fa fa-plug"></i> How It Works</h3>
       <p>The API key is included in your request header using <code>trevoapi</code>. The backend will:</p>
       <ol class="w3-ol">
@@ -68,7 +68,7 @@
       <p>This makes the API ideal for integration in frontend features or external devices (like minibots, home automation, etc.).</p>
     </div>
 
-    <div class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
+    <div id="c" class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
       <h3><i class="fa fa-paper-plane"></i> Example Request</h3>
       <p>Send a POST request to create a new message and trigger a task:</p>
       <div class="code-box w3-card w3-light-grey w3-round w3-padding-small">
@@ -81,18 +81,13 @@ Headers:
 
 Body:
 {
-  "prompt": "Remind me to stretch every hour",
-  "app": "scheduler",
-  "schedule": {
-    "type": "interval",
-    "every": "1h"
-  }
+  "prompt": "Create a message tha will make my friend enjoy his birthday. Send this message later to Name in 1hr in my Msg App. Also, do this task yearly until 2030."
 }
 </pre>
       </div>
     </div>
 
-    <div class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
+    <div id="d" class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
       <h3><i class="fa fa-shield"></i> Security</h3>
       <ul class="w3-ul">
         <li>Each key is unique per user</li>
@@ -101,7 +96,7 @@ Body:
       </ul>
     </div>
 
-    <div class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
+    <div id="e" class="w3-white w3-round-large w3-padding-large w3-margin-bottom">
       <h3><i class="fa fa-cogs"></i> Use Cases</h3>
       <ul class="w3-ul">
         <li>Automate home devices (e.g., send AI prompts based on sensors)</li>
@@ -116,8 +111,18 @@ Body:
     </p>
 
   </div>
-
+  <script>
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
 </div>
+
 </body>
   
 </body>

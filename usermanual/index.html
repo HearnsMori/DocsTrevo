@@ -7,8 +7,31 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../style.css">
-  <title>Trevo Documentation</title>
+  <title>DocsTrevo: User Manual</title>
+  <style>
+  	.section {
+      background-color: #f1f1f1;
+      border-left: 4px solid #3f51b5;
+      padding: 16px;
+      margin: 16px;
+      border-radius: 4px;
+    }
+    .screenshot-box {
+      background: #ddd;
+      height: 200px;
+      text-align: center;
+      line-height: 200px;
+      color: #555;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    h2, h3 {
+      color: #3f51b5;
+    }
+  </style>
 </head>
 <body>
   <header class="header" id="a">
@@ -25,20 +48,24 @@
       	  <a href="../more.html" class="w3-bar-item w3-button w3-padding-medium">More</a>
         </div>
         <span class="w3-right">
-          <a href="#a" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
-          <a href="#b" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Changelog</a>
-          <a href="#c" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
-          <a href="#d" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Application</a>
-          <a href="#e" class="w3-bar-item w3-button w3-padding-large w3-hide-small">License</a>
+          <a href="#a" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Auth</a>
+          <a href="#b" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home Page</a>
+          <a href="#c" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Adding Friend</a>
+          <a href="#d" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Navigation Bar</a>
+          <a href="#e" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Message Page</a>
+          <a href="#f" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Task Page</a>
+          <a href="#g" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Trevo App Development</a>
         </span>
       </div>
     </div>
     <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-      <a href="#a" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
-      <a href="#b" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Changelog</a>
-      <a href="#c" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQ</a>
-      <a href="#d" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Application</a>
-      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">License</a>
+      <a href="#a" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Auth</a>
+      <a href="#b" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Home Pages</a>
+      <a href="#c" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Adding Friends</a>
+      <a href="#d" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Navigation Bar</a>
+      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Message Page</a>
+      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Task Page</a>
+      <a href="#e" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Trevo App Development</a>
     </div>
   </header>
   
@@ -49,7 +76,7 @@
   </div>
 
   <!-- User Manual Sections -->
-  <section class="w3-container w3-padding-32">
+  <section id="a" class="w3-container w3-padding-32">
 
     <!-- Login and Signup Section -->
     <div class="w3-padding-32">
@@ -66,7 +93,7 @@
     </div>
 
     <!-- Home Page Section -->
-    <div class="w3-padding-32">
+    <div id="b" class="w3-padding-32">
       <h2 class="w3-text-flat-pomegranate"><i class="fa fa-home w3-margin-right"></i>Home Page</h2>
       <p>Upon logging in, you'll be redirected to the Home page. Initially, no apps will be displayed, but you can install apps from the in-app store by clicking the <strong>plus button</strong>.</p>
       <p>The Home page is where you manage your apps, and you can add friends or explore other app functionalities.</p>
@@ -77,7 +104,7 @@
     </div>
 
     <!-- Adding Friends Section -->
-    <div class="w3-padding-32">
+    <div id="c" class="w3-padding-32">
       <h2 class="w3-text-flat-green-sea"><i class="fa fa-users w3-margin-right"></i>Adding Friends</h2>
       <p>You can add friends from the Home page. On the top right of the screen, click the "add friend" icon to search for and send friend requests to other users.</p>
       <p>This allows you to connect and interact with others within the app.</p>
@@ -88,7 +115,7 @@
     </div>
 
     <!-- Navigation Bar Section -->
-    <div class="w3-padding-32">
+    <div id="d" class="w3-padding-32">
       <h2 class="w3-text-flat-midnight-blue"><i class="fa fa-bars w3-margin-right"></i>Navigation Bar</h2>
       <p>At the bottom of the Home screen, you'll find the navigation bar with three essential tabs:</p>
       <ul class="w3-ul w3-left-align">
@@ -103,7 +130,7 @@
     </div>
 
     <!-- Message Page Section -->
-    <div class="w3-padding-32">
+    <div id="e" class="w3-padding-32">
       <h2 class="w3-text-flat-pomegranate"><i class="fa fa-comments w3-margin-right"></i>Message Page</h2>
       <p>On the Message page, you can interact with the AI. Key functionalities include:</p>
       <ul class="w3-ul w3-left-align">
@@ -118,7 +145,7 @@
     </div>
 
     <!-- Task Page Section -->
-    <div class="w3-padding-32">
+    <div id="f" class="w3-padding-32">
       <h2 class="w3-text-flat-belize-hole"><i class="fa fa-tasks w3-margin-right"></i>Task Page</h2>
       <p>The Task page allows you to view, edit, and manage your automated tasks. You can configure tasks, update their details, and modify their settings.</p>
       <p>Additionally, in the top right of the page, there is a settings option where you can update your account details or add additional email addresses (up to 3).</p>
@@ -127,7 +154,17 @@
         <span><strong>Insert Screenshot Here</strong></span>
       </div>
     </div>
-
+    
+    <!-- Trevo App Dev Nav Section -->
+    <div id="g" class="w3-padding-32">
+      <h2 class="w3-text-flat-belize-hole"><i class="fa fa-tasks w3-margin-right"></i>Trevo App Development</h2>
+      <a href="../trevoappdev.html"
+        class="w3-button w3-round-xxlarge w3-hover-shadow w3-card-4 w3-animate-opacity"
+        style=" width: 84vw; padding:16px 32px; font-size:18px; background-color:#4CAF50; color:white; text-decoration:none;">
+        Go to Trevo App Development<br/> Tutorial
+      </a>
+    </div>
+  
   </section>
 
   <!-- Conclusion Section -->
